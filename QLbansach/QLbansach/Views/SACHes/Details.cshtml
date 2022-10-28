@@ -1,0 +1,42 @@
+﻿@model QLbansach.Models.SACH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+<h2>Thông tin chi tiết sách</h2>
+<style>
+    #Datmua a {
+        clear: both;
+        background-color: red;
+        color: white;
+        width: 120px;
+        height: 35px;
+        display: block;
+        float: right;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: bold;
+        font-size: 14;
+        text-decoration: none;
+    }
+</style>
+<br />
+<table border="0" style="width:100%">
+    <tr>
+        <td style="width: 60%" valign="top">
+            <h1 style="font-weight: bold; color:red">Tên sách: @Model.Tensach</h1><br />
+            <p style="text-align:justify"><b style="font-size: 18pt">Mô tả: @Model.Mota</b></p><br />
+            <p style="font-size: 18pt"><b>Giá bán:<span style="color:red">@Model.Giaban VNĐ</span></b></p>
+        </td>
+        <td style="width: 40%">
+            <img src="~/wwwroot/images/@Model.Anhbia" width="300" />
+        </td>
+    </tr>
+</table>
+<br />
+<div id="Datmua" onclick="alert('Thêm vào giỏ hàng thành công')">
+    <a href="@Url.Action("Themgiohang", "GioHangs", new { @iMasach= Model.Masach, @strURL= Request.Url.ToString()}) ">
+        ĐẶT MUA
+    </a>
+</div>

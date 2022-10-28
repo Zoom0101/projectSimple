@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pain App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="tool">
+        <input type="color" id="color">
+        <button id="eraser">
+            <i class="fa-sharp fa-solid fa-eraser" style="border:none "></i>
+        </button>
+        <button id="decrease">
+            -
+        </button>
+        <div id="size">
+            20
+        </div>
+        <button id="increase">
+            +
+        </button>
+        <a id="save" download="image1.png">
+            <i class="fa-regular fa-floppy-disk" style="border:none"></i>
+        </a>
+        <button id="clear">
+            <i class="fa-regular fa-rectangle-xmark" style="border:none"></i>
+        </button>
+    </div>
+    <div class="container">
+        <canvas height="800px" width="1500px">
+        </canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

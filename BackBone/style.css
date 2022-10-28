@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to left top, red, green);
+    font-family: sans-serif;
+}
+
+.container {
+    width: 430px;
+    margin: 100px auto;
+    background: white;
+    padding-top: 10px;
+}
+
+#header {
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+#header input {
+    font-size: 24px;
+    margin-right: 15px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+#header button {
+    background: yellowgreen;
+    padding: 5px 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}
+
+.todos li {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+li.completed {
+    color: #aaa;
+}
+
+li.completed span {
+    text-decoration: line-through;
+}
+
+.todos li span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#todo-list input.edit {
+    display: none;
+}
+
+#todo-list .editing span {
+    display: none;
+}
+
+#todo-list .editing input.edit {
+    display: inline;
+    font-size: 24px;
+    font-style: italic;
+    width: 100%;
+    margin-right: 15px;
+    border: none;
+    outline: none;
+    /* Shows input text box when .editing*/
+}

@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "List";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/employee.js"></script>
+
+<!DOCTYPE html>
+
+<div class="container">
+    <h2>DANH SÁCH NHÂN VIÊN</h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">THÊM NHÂN VIÊN</button><br /><br />
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    MÃ  
+                </th>
+                <th>
+                    Họ Tên
+                </th>
+                <th>
+                    Tuổi
+                </th>
+                <th>
+                    Vùng
+                </th>
+                <th>
+                    Quốc Gia
+                </th>
+                <th>
+                    Hành Động
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Thêm nhân viên</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="EmployeeId">Mã Nhân Viên</label>
+                        <input type="text" class="form-control" id="EmployeeID" placeholder="MÃ" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Họ và Tên</label>
+                        <input type="text" class="form-control" id="Name" placeholder="TÊN" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Age">Tuổi</label>
+                        <input type="text" class="form-control" id="Age" placeholder="TUỔI" />
+                    </div>
+                    <div class="form-group">
+                        <label for="State">Vùng</label>
+                        <input type="text" class="form-control" id="State" placeholder="VÙNG" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Country">Quốc gia</label>
+                        <input type="text" class="form-control" id="Country" placeholder="QUỐC GIA" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">THÊM</button>
+                <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">SỬA</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">ĐÓNG</button>
+            </div>
+        </div>
+    </div>
+</div>
+
